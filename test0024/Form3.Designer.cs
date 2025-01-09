@@ -28,20 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             cboCountry = new ComboBox();
             dgvResult = new DataGridView();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvResult).BeginInit();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(261, 62);
-            label1.Name = "label1";
-            label1.Size = new Size(50, 20);
-            label1.TabIndex = 0;
-            label1.Text = "label1";
             // 
             // cboCountry
             // 
@@ -54,6 +45,8 @@
             // 
             // dgvResult
             // 
+            dgvResult.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvResult.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvResult.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvResult.Location = new Point(35, 121);
             dgvResult.Name = "dgvResult";
@@ -61,14 +54,24 @@
             dgvResult.Size = new Size(728, 317);
             dgvResult.TabIndex = 2;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("TH Krub", 19.7999973F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(78, 54);
+            label1.Name = "label1";
+            label1.Size = new Size(246, 30);
+            label1.TabIndex = 4;
+            label1.Text = "เลือกประเทศที่ตั้งลูกค้า\r\n";
+            // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label1);
             Controls.Add(dgvResult);
             Controls.Add(cboCountry);
-            Controls.Add(label1);
             Name = "Form3";
             Text = "Form3";
             WindowState = FormWindowState.Maximized;
@@ -79,9 +82,8 @@
         }
 
         #endregion
-
-        private Label label1;
         private ComboBox cboCountry;
         private DataGridView dgvResult;
+        private Label label1;
     }
 }

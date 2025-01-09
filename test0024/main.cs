@@ -44,5 +44,17 @@ namespace test0024
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void main_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            Form9 frm = new Form9();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

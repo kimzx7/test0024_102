@@ -36,6 +36,8 @@
             // 
             // dgvResult
             // 
+            dgvResult.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvResult.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvResult.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvResult.Location = new Point(28, 100);
             dgvResult.Name = "dgvResult";
@@ -46,7 +48,7 @@
             // cboCountry
             // 
             cboCountry.FormattingEnabled = true;
-            cboCountry.Location = new Point(357, 36);
+            cboCountry.Location = new Point(373, 39);
             cboCountry.Name = "cboCountry";
             cboCountry.Size = new Size(215, 28);
             cboCountry.TabIndex = 4;
@@ -55,11 +57,12 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(262, 39);
+            label1.Font = new Font("TH Krub", 19.7999973F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(131, 34);
             label1.Name = "label1";
-            label1.Size = new Size(39, 20);
+            label1.Size = new Size(203, 30);
             label1.TabIndex = 3;
-            label1.Text = "แสดง";
+            label1.Text = "เลือกประเภทสินค้า";
             // 
             // Form4
             // 

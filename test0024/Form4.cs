@@ -83,7 +83,8 @@ namespace test0024
             }
             else
             {
-                int cid = cboCountry.SelectedIndex;
+                //int cid = cboCountry.SelectedIndex;
+                int cid = Convert.ToInt32(cboCountry.SelectedValue);
                 showProducts(cid);
             }
         }

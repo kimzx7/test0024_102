@@ -28,52 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            label2 = new Label();
             txtStart = new TextBox();
             txtEnd = new TextBox();
             btnShow = new Button();
             dgvResult = new DataGridView();
+            label3 = new Label();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvResult).BeginInit();
             SuspendLayout();
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(34, 87);
-            label1.Name = "label1";
-            label1.Size = new Size(50, 20);
-            label1.TabIndex = 0;
-            label1.Text = "label1";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(319, 87);
-            label2.Name = "label2";
-            label2.Size = new Size(50, 20);
-            label2.TabIndex = 1;
-            label2.Text = "label2";
-            // 
             // txtStart
             // 
-            txtStart.Location = new Point(102, 87);
+            txtStart.Location = new Point(172, 27);
             txtStart.Name = "txtStart";
             txtStart.Size = new Size(182, 27);
             txtStart.TabIndex = 2;
             // 
             // txtEnd
             // 
-            txtEnd.Location = new Point(416, 87);
+            txtEnd.Location = new Point(172, 85);
             txtEnd.Name = "txtEnd";
             txtEnd.Size = new Size(182, 27);
             txtEnd.TabIndex = 3;
             // 
             // btnShow
             // 
-            btnShow.Location = new Point(635, 86);
+            btnShow.Location = new Point(422, 27);
             btnShow.Name = "btnShow";
-            btnShow.Size = new Size(94, 29);
+            btnShow.Size = new Size(183, 90);
             btnShow.TabIndex = 4;
             btnShow.Text = "แสดงข้อมูล";
             btnShow.UseVisualStyleBackColor = true;
@@ -81,6 +63,8 @@
             // 
             // dgvResult
             // 
+            dgvResult.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvResult.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvResult.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvResult.Location = new Point(34, 158);
             dgvResult.Name = "dgvResult";
@@ -88,17 +72,37 @@
             dgvResult.Size = new Size(695, 280);
             dgvResult.TabIndex = 5;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("TH Krub", 19.7999973F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(34, 24);
+            label3.Name = "label3";
+            label3.Size = new Size(132, 30);
+            label3.TabIndex = 6;
+            label3.Text = "ราคาเริ่มต้น";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("TH Krub", 19.7999973F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(34, 82);
+            label1.Name = "label1";
+            label1.Size = new Size(93, 30);
+            label1.TabIndex = 7;
+            label1.Text = "ถึงราคา";
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label1);
+            Controls.Add(label3);
             Controls.Add(dgvResult);
             Controls.Add(btnShow);
             Controls.Add(txtEnd);
             Controls.Add(txtStart);
-            Controls.Add(label2);
-            Controls.Add(label1);
             Name = "Form2";
             Text = "Form2";
             WindowState = FormWindowState.Maximized;
@@ -108,12 +112,11 @@
         }
 
         #endregion
-
-        private Label label1;
-        private Label label2;
         private TextBox txtStart;
         private TextBox txtEnd;
         private Button btnShow;
         private DataGridView dgvResult;
+        private Label label3;
+        private Label label1;
     }
 }
