@@ -36,6 +36,8 @@
             // 
             // dgvDetail
             // 
+            dgvDetail.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvDetail.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvDetail.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvDetail.Location = new Point(12, 321);
             dgvDetail.Name = "dgvDetail";
@@ -45,6 +47,8 @@
             // 
             // DgvOrder
             // 
+            DgvOrder.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            DgvOrder.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgvOrder.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DgvOrder.Location = new Point(12, 20);
             DgvOrder.Name = "DgvOrder";
@@ -62,6 +66,7 @@
             Controls.Add(DgvOrder);
             Name = "Form9";
             Text = "Form9";
+            WindowState = FormWindowState.Maximized;
             Load += Form9_Load;
             ((System.ComponentModel.ISupportInitialize)dgvDetail).EndInit();
             ((System.ComponentModel.ISupportInitialize)DgvOrder).EndInit();

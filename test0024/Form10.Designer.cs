@@ -45,6 +45,7 @@
             btnShow.TabIndex = 13;
             btnShow.Text = "แสดงข้อมูล";
             btnShow.UseVisualStyleBackColor = true;
+            btnShow.Click += btnShow_Click;
             // 
             // cboCountry
             // 
@@ -64,6 +65,8 @@
             // 
             // dgvDetail
             // 
+            dgvDetail.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvDetail.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvDetail.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvDetail.Location = new Point(12, 309);
             dgvDetail.Name = "dgvDetail";
@@ -73,12 +76,16 @@
             // 
             // dgvOrder
             // 
+            dgvOrder.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvOrder.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvOrder.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvOrder.Location = new Point(12, 101);
             dgvOrder.Name = "dgvOrder";
             dgvOrder.RowHeadersWidth = 51;
             dgvOrder.Size = new Size(776, 179);
             dgvOrder.TabIndex = 9;
+            dgvOrder.CellContentClick += dgvOrder_CellContentClick;
+            dgvOrder.CellMouseClick += dgvOrder_CellMouseClick;
             // 
             // Form10
             // 
@@ -92,6 +99,7 @@
             Controls.Add(dgvOrder);
             Name = "Form10";
             Text = "Form10";
+            WindowState = FormWindowState.Maximized;
             Load += Form10_Load;
             ((System.ComponentModel.ISupportInitialize)dgvDetail).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvOrder).EndInit();

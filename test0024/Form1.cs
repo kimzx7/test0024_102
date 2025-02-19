@@ -38,5 +38,18 @@ namespace test0024
 
             return conn;
         }
+
+        public static SqlConnection connectDBExample()
+        {
+            string server = "LAPTOP-H29QM8LM\\SQLEXPRESS";//server ของตัวเอง
+            string db = "DBExample";
+
+            string strCon = string.Format(@"Data source={0}; Initial Catalog={1}; Integrated Security=True; Encrypt= False;", server, db);
+
+            SqlConnection conn = new SqlConnection(strCon);
+            conn.Open();
+
+            return conn;
+        }
     }
 }

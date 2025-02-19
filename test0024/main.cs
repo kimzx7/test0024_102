@@ -56,5 +56,40 @@ namespace test0024
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            Form10 frm = new Form10();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void จดการขอมลToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form11 frm = new Form11();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void toolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+            Form12 frm = new Form12();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void toolStripMenuItem6_Click(object sender, EventArgs e)
+        {
+            Form12 frm = new Form12();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void toolStripMenuItem7_Click(object sender, EventArgs e)
+        {
+            Form14 frm = new Form14();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }
