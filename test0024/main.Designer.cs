@@ -121,7 +121,7 @@
             // toolStripMenuItem5
             // 
             toolStripMenuItem5.Name = "toolStripMenuItem5";
-            toolStripMenuItem5.Size = new Size(100, 26);
+            toolStripMenuItem5.Size = new Size(224, 26);
             toolStripMenuItem5.Text = "1";
             toolStripMenuItem5.Click += toolStripMenuItem5_Click;
             // 
@@ -129,8 +129,8 @@
             // 
             workshoptestToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toolStripMenuItem6, toolStripMenuItem7 });
             workshoptestToolStripMenuItem.Name = "workshoptestToolStripMenuItem";
-            workshoptestToolStripMenuItem.Size = new Size(119, 24);
-            workshoptestToolStripMenuItem.Text = "Workshop_test";
+            workshoptestToolStripMenuItem.Size = new Size(130, 24);
+            workshoptestToolStripMenuItem.Text = "Workshop_Store";
             // 
             // toolStripMenuItem6
             // 

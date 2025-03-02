@@ -80,7 +80,7 @@ namespace test0024
 
         private void toolStripMenuItem6_Click(object sender, EventArgs e)
         {
-            Form12 frm = new Form12();
+            Form13 frm = new Form13();
             frm.MdiParent = this;
             frm.Show();
         }

@@ -46,10 +46,10 @@
             dgvOrderDetail.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvOrderDetail.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvOrderDetail.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvOrderDetail.Location = new Point(12, 328);
+            dgvOrderDetail.Location = new Point(12, 369);
             dgvOrderDetail.Name = "dgvOrderDetail";
             dgvOrderDetail.RowHeadersWidth = 51;
-            dgvOrderDetail.Size = new Size(776, 110);
+            dgvOrderDetail.Size = new Size(776, 69);
             dgvOrderDetail.TabIndex = 12;
             // 
             // dgvOrder
@@ -60,7 +60,7 @@
             dgvOrder.Location = new Point(12, 120);
             dgvOrder.Name = "dgvOrder";
             dgvOrder.RowHeadersWidth = 51;
-            dgvOrder.Size = new Size(776, 179);
+            dgvOrder.Size = new Size(776, 213);
             dgvOrder.TabIndex = 11;
             dgvOrder.CellMouseClick += dgvOrder_CellMouseClick;
             // 
@@ -120,7 +120,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(22, 305);
+            label4.Location = new Point(12, 336);
             label4.Name = "label4";
             label4.Size = new Size(116, 20);
             label4.TabIndex = 19;

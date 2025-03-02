@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
+
 
 namespace test0024
 {
@@ -20,7 +22,7 @@ namespace test0024
 
         public void ShowProducts()
         {
-            SqlConnection conn = DBConnect.connectNorthwind();
+            SqlConnection conn = DBConnect.NW_Connect();
             String sql = "Select * From Products";
             SqlDataAdapter da = new SqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
@@ -41,7 +43,7 @@ namespace test0024
 
         private void ShowCategory()
         {
-            SqlConnection conn = DBConnect.connectNorthwind();
+            SqlConnection conn = DBConnect.NW_Connect();
             String sql = "Select categoryID , categoryName From Categories";
             SqlDataAdapter da = new SqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
@@ -65,22 +67,17 @@ namespace test0024
         private void dgvResult_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int row = e.RowIndex;
-            if (row < 0) return;
 
             txtPid.Text = dgvResult.Rows[row].Cells[0].Value.ToString();
             txtPname.Text = dgvResult.Rows[row].Cells[1].Value.ToString();
             txtDes.Text = dgvResult.Rows[row].Cells[2].Value.ToString();
             txtPrice.Text = dgvResult.Rows[row].Cells[3].Value.ToString();
-
-            // กำหนดค่าให้ cboCid.SelectedValue ตาม CategoryID
-            if (dgvResult.Rows[row].Cells[4].Value != DBNull.Value)
-            {
-                cboCid.SelectedValue = dgvResult.Rows[row].Cells[4].Value;
-            }
+            cboCid.SelectedValue = dgvResult.Rows[row].Cells[4].Value;
+        
         }
         public void InsertProduct()
         {
-            SqlConnection conn = DBConnect.connectNorthwind();
+            SqlConnection conn = DBConnect.NW_Connect();
             string sql = "INSERT INTO Products (ProductName, detail, unitprice, categoryID) " + "VALUES (@p_name, @p_des, @p_price, @c_id)";
             SqlCommand com = new SqlCommand(sql, conn);
             com.Parameters.AddWithValue("@p_name", txtPname.Text);
@@ -99,7 +96,7 @@ namespace test0024
 
         private void UpdateProduct(int p_id)
         {
-            SqlConnection conn = DBConnect.connectNorthwind();
+            SqlConnection conn = DBConnect.NW_Connect();
             String sql = "Update Products Set ProductName = @p_name, detail = @p_des, unitprice = @p_price, categoryID = @c_id Where ProductID = @p_id";
             SqlCommand com = new SqlCommand(sql, conn);
             decimal unitPrice = decimal.Parse(txtPrice.Text);
@@ -127,7 +124,7 @@ namespace test0024
         }
         private void DeleteProduct(int p_id)
         {
-            SqlConnection conn = DBConnect.connectNorthwind();
+            SqlConnection conn = DBConnect.NW_Connect();
             String sql = "Delete From Products Where ProductID = @p_id";
             SqlCommand com = new SqlCommand(sql, conn);
             com.Parameters.AddWithValue("@p_id", p_id);
@@ -154,5 +151,6 @@ namespace test0024
         {
 
         }
+
     }
 }

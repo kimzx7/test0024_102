@@ -153,42 +153,44 @@ namespace test0024
         {
             
 
-            if(txtEmail.Text == "")
-            {
-                lbEmailErr.Visible = true;
-            }
-            else
-            {
-                lbEmailErr.Visible = false;
-            }
+            //if(txtEmail.Text == "")
+            //{
+            //    lbEmailErr.Visible = true;
+            //}
+            //else
+            //{
+            //    lbEmailErr.Visible = false;
+            //}
         }
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
             
 
-            if (txtPassword.Text == "")
-            {
-                lbEmailErr.Visible = true;
-            }
-            else
-            {
-                lbPwdErr.Visible = false;
-            }
+            //if (txtPassword.Text == "")
+            //{
+            //    lbEmailErr.Visible = true;
+            //}
+            //else
+            //{
+            //    lbPwdErr.Visible = false;
+
+
+            //}
         }
 
         private void txtCfPassword_TextChanged(object sender, EventArgs e)
         {
             
 
-            if (txtCfPassword.Text == "")
-            {
-                lbEmailErr.Visible = true;
-            }
-            else
-            {
-                lbCfPwdErr.Visible = false;
-            }
+            //if (txtCfPassword.Text == "")
+            //{
+            //    lbEmailErr.Visible = true;
+            //}
+            //else
+            //{
+            //    lbCfPwdErr.Visible = false;
+            //}
         }
     }
 }

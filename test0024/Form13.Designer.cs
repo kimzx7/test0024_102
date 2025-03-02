@@ -34,6 +34,7 @@
             label2 = new Label();
             btnadd = new Button();
             dgvProduct = new DataGridView();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvProduct).BeginInit();
             SuspendLayout();
             // 
@@ -80,6 +81,7 @@
             btnadd.TabIndex = 4;
             btnadd.Text = "เพิ่มข้อมูล";
             btnadd.UseVisualStyleBackColor = true;
+            btnadd.Click += btnadd_Click;
             // 
             // dgvProduct
             // 
@@ -92,12 +94,23 @@
             dgvProduct.Size = new Size(1076, 295);
             dgvProduct.TabIndex = 5;
             // 
+            // button1
+            // 
+            button1.Location = new Point(885, 89);
+            button1.Name = "button1";
+            button1.Size = new Size(136, 60);
+            button1.TabIndex = 4;
+            button1.Text = "ล้างข้อมูล";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // Form13
             // 
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1100, 630);
             Controls.Add(dgvProduct);
+            Controls.Add(button1);
             Controls.Add(btnadd);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -108,6 +121,7 @@
             Name = "Form13";
             Text = "Form13";
             WindowState = FormWindowState.Maximized;
+            Load += Form13_Load;
             ((System.ComponentModel.ISupportInitialize)dgvProduct).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -121,5 +135,6 @@
         private Label label2;
         private Button btnadd;
         private DataGridView dgvProduct;
+        private Button button1;
     }
 }
